@@ -23,10 +23,20 @@ class MainActivity : AppCompatActivity() {
             //Toasts are little pop up messages
             val toast = Toast.makeText(this, "Dice Rolled!", Toast.LENGTH_SHORT)
             toast.show()
-            val resultTextView: TextView =findViewById(R.id.textView)
+            val result1: TextView =findViewById(R.id.res1)
+            val result2: TextView =findViewById(R.id.res2)
+            val win: TextView =findViewById(R.id.winner)
             val die = Dice(6) //Create a new class from Dice
-            val dieRoll = die.roll() //Roll it and save output
-            resultTextView.text = dieRoll.toString() //Convert to a string
+            val die1 = die.roll() //Roll it and save output
+            val die2 = die.roll() //Roll it and save output
+            result1.text = die1.toString() //Convert to a string
+            result2.text = die2.toString()
+            if (die1==die2){
+                win.text ="You got a pair\n" +
+                        "YOU WIN!!!"
+            } else {
+                win.text ="No pair\n" +
+                        "YOU LOSE!!!"}
         }
 
 

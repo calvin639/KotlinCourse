@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">DiceRoller</string>
     <string name="Button1">Role</string>
+    <string name="Dice1"></string>
+    <string name="Dice2"></string>
+    <string name="winner" />
 </resources>
